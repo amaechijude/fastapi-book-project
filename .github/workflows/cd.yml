@@ -48,6 +48,7 @@ jobs:
         key: ${{ secrets.VM_SSH_KEY }}
         script: |
           sudo bash stop.sh
+          sudo bash remove.sh
           sudo docker load -i /home/${{ secrets.VM_USERNAME }}/image.tar/image.tar
           sudo docker run -d -p 8000:8000 fastapiapp:latest
           sudo systemctl start nginx

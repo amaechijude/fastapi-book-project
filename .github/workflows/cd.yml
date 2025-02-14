@@ -54,3 +54,4 @@ jobs:
           sudo systemctl start nginx
           sudo systemctl reload nginx
           rm -rf image.tar
+
